@@ -1,0 +1,22 @@
+.background{
+    background-image: url(../image/Background\ technologique\ des\ circuits\ imprimés\ _\ Vecteur\ Premium.jpg);
+}
+
+.conteneur {
+    display: flex;              /* Active Flexbox */
+    align-items: center;        /* Aligne verticalement */
+    justify-content: space-between; /* Espace entre image et texte */
+    gap: 20px;                  /* Espace entre les deux */
+    padding: 20px;
+}
+
+.conteneur img {
+    max-width:auto;           /* Taille max de l'image */
+    height: auto;
+    border-radius: 8px;
+}
+
+.texte {
+    max-width: 500px;           /* Limite la largeur du texte */
+    font-family: Arial, sans-serif;
+}
