@@ -3,20 +3,50 @@
 }
 
 .conteneur {
-    display: flex;              /* Active Flexbox */
-    align-items: center;        /* Aligne verticalement */
-    justify-content: space-between; /* Espace entre image et texte */
-    gap: 20px;                  /* Espace entre les deux */
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100vw;           /* Prend toute la largeur de la fenêtre */
+    min-height: 300px;      /* Hauteur minimum, à ajuster selon besoin */
+    gap: 0;                 /* Pas d'espace entre image et texte */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .conteneur img {
-    max-width:auto;           /* Taille max de l'image */
-    height: auto;
-    border-radius: 8px;
+    flex: 1;                /* L'image prend autant de place que possible */
+    width: 100%;
+    height: 500px;
+    object-fit: cover;      /* L'image s'adapte sans déformation */
+    border-radius: 0;       /* Pas d'arrondi pour occuper toute la largeur */
+    display: block;
 }
 
 .texte {
-    max-width: 500px;           /* Limite la largeur du texte */
-    font-family: Arial, sans-serif;
+    flex: 1;                /* Le texte prend autant de place que possible */
+    color: white;
+    font-size: 2vw;         /* Taille du texte responsive */
+    padding: 40px;
+    background: rgba(0,0,0,0.5); /* Fond semi-transparent pour lisibilité */
+    box-sizing: border-box;
+}
+.conteneur2 {
+    display: flex;
+    align-items: center;
+    width: 100vw;           /* Prend toute la largeur de la fenêtre */
+    min-height: 300px;      /* Hauteur minimum, à ajuster selon besoin */
+    gap: 5px;                 /* Pas d'espace entre image et texte */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conteneur2 img{
+    flex: 1;                /* L'image prend autant de place que possible */
+    width: 100%;
+    height: 500px;
+    object-fit: cover;      /* L'image s'adapte sans déformation */
+    border-radius: 8px 8px;       /* Pas d'arrondi pour occuper toute la largeur */
+    display: block;
+    padding-top:20px;
+
 }

@@ -51,6 +51,20 @@ body {
     color: white;
     cursor: pointer;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
