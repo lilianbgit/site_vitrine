@@ -10,41 +10,51 @@
 </head>
 <body class="background">
     <nav class="navbar">
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="histoire.html">Notre histoire</a></li>
-            <li><a href="equipe.html">Notre équipe</a></li>
-            <li><a href="produits.html">Nos produits</a></li>
-            <li><a href="contact.html">Nous contacter</a></li>
-        </ul>
-    </nav>
+    <div class="logo">Mat'inf</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="histoire.html">Notre histoire</a></li>
+        <li><a href="equipe.html">Notre équipe</a></li>
+        <li><a href="produits.html">Nos Produits</a></li>
+        <li><a href="contact.html">Nous contacter</a></li>
+    </ul>
+</nav> 
+<header class="banniere animated-header">
+    <h1>Bienvenue sur Mat'inf</h1>
+    <p>Les composants qui font la différence</p>
+</header>
 
-    
 <div class="conteneur">
-    <img src="../image/logo_matinf.png" alt="Image mat'inf" >
+    <img src="../image/logo_matinf.png">
     <div class="texte">
-        <h2 width:200px>Mat'inf</h2>
-        <p>“Mat’Inf : Les composants qui font la différence”</p>    
-        <p>Chez Mat'inf, nous vendons les meilleurs composants a des prix raisonnable.<br>
-        Vous pouvez trouver tous se qu'il vous faut.</p>
+        <h2>Mat'inf</h2>
+        <p>“Mat’Inf : Les composants qui font la différence”</p>
     </div>
 </div>
-<div class="conteneur2">
-    <img src="../image/barrette_ram.png" alt="Image ram" >
-    <img src="../image/cpu.png" alt="Image cpu" >
+<div class="accueil-blocs">
+    <div class="bloc bloc-histoire" onclick="window.location.href='histoire.html'">
+        <h3>Qui sommes-nous&nbsp;?</h3>
+        <p>Nous sommes Mat'Inf <br>
+        Chez nous vous pouvez retrouver de multiple composants pour votre ordinateur<br>
+        Nous associons qualité et petit prix</p>
+    </div>
+    <div class="bloc bloc-produits" onclick="window.location.href='produits.html'">
+        <h3>Découvrir nos produits</h3>
+        <img src="../image/cpu.png">
+        
+    </div>
+    <div class="bloc bloc-effectif" onclick="window.location.href='equipe.html'">
+        <h3>Effectif</h3>
+        <p>Nous sommes <span class="effectif-nombre">5</span> collaborateur.<br>
+        Prêt a vous servir.</p>
+    </div>
 </div>
 <footer class="footer">
-    <p>&copy; 2024 Mat'inf. Tous droits réservés.</p>
+    <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
 </footer>
 
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
+    
 
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>

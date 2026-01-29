@@ -1,6 +1,4 @@
-.background{
-    background-image: url(../image/Background\ technologique\ des\ circuits\ imprimés\ _\ Vecteur\ Premium.jpg);
-}
+
 
 .conteneur {
     display: flex;
@@ -14,9 +12,8 @@
 }
 
 .conteneur img {
-    flex: 1;                /* L'image prend autant de place que possible */
-    width: 100%;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;      /* L'image s'adapte sans déformation */
     border-radius: 0;       /* Pas d'arrondi pour occuper toute la largeur */
     display: block;
@@ -26,27 +23,124 @@
     flex: 1;                /* Le texte prend autant de place que possible */
     color: white;
     font-size: 2vw;         /* Taille du texte responsive */
-    padding: 40px;
+    padding: 29px;
     background: rgba(0,0,0,0.5); /* Fond semi-transparent pour lisibilité */
     box-sizing: border-box;
 }
 .conteneur2 {
     display: flex;
     align-items: center;
-    width: 100vw;           /* Prend toute la largeur de la fenêtre */
+    width: 100%;           /* Prend toute la largeur de la fenêtre */
     min-height: 300px;      /* Hauteur minimum, à ajuster selon besoin */
     gap: 5px;                 /* Pas d'espace entre image et texte */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.conteneur2 img{
-    flex: 1;                /* L'image prend autant de place que possible */
-    width: 100%;
-    height: 500px;
-    object-fit: cover;      /* L'image s'adapte sans déformation */
-    border-radius: 8px 8px;       /* Pas d'arrondi pour occuper toute la largeur */
-    display: block;
-    padding-top:20px;
+header  {
+    color: white;
+    background-color: rgb(0, 0,0,0.5);
+}
+.banniere {
+    width: 100%; /* Toute la largeur de la fenêtre */
+    min-height: 300px;
+    background-image: url('../image/Fond\ d\'écran\ cyberfuturiste\ à\ gradient\ vectoriel\ gratuit.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 40px 0;
+}
 
+.animated-header h1, .animated-header p, .animated-header a {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideIn 1s forwards;
+}
+
+.animated-header h1 {
+    animation-delay: 0.2s;
+}
+.animated-header p {
+    animation-delay: 0.6s;
+}
+.animated-header a {
+    animation-delay: 1s;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.accueil-blocs {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.bloc {
+    background: rgba(51,51,51,0.95);
+    color: white;
+    flex: 1;
+    min-width: 220px;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloc:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    background: #ff9800;
+    color: #222;
+}
+
+.bloc-produits img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.effectif-nombre {
+    font-weight: bold;
+    font-size: 2em;
+    color: #002fff;
+}
+
+@media (max-width: 900px) {
+    .accueil-blocs {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .bloc {
+        max-width: 90vw;
+    }
 }

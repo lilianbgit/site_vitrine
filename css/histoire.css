@@ -1,0 +1,35 @@
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #ff9800;
+    margin-bottom: 18px;
+    font-size: 2em;
+    text-align: center;
+}
+
+section p, section ul {
+    color: #222;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 700px) {
+    section {
+        max-width: 98vw;
+        padding: 18px 6vw;
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+}

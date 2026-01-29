@@ -1,15 +1,25 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.background{
+    background-image: url(../image/Background\ technologique\ des\ circuits\ imprimés\ _\ Vecteur\ Premium.jpg);
+
 }
 
 .navbar {
+    width: 100%; /* ou 100% */
+    left: 0;
+    margin: 0;
+    padding: 0 0;
+    box-sizing: border-box;
+    background-color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
 }
 
 .logo {
@@ -52,10 +62,10 @@ body {
     cursor: pointer;
 }
 .footer {
-    position: fixed;
+    position: flex;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
