@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mat'inf</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/histoire.css">
+    <link rel="stylesheet" href="../css/equipe.css">
 </head>
 <body class="background">
     <nav class="navbar">
@@ -19,6 +19,64 @@
         <li><a href="contact.html">Nous contacter</a></li>
     </ul>
 </nav> 
+<!-- === Organigramme (CSS-only, avec flèches, sans surbrillance) === -->
+<section class="org3" aria-label="Organigramme">
+
+  <!-- Ligne 1 -->
+  <div class="row row-1">
+    <div class="card role-dir" id="cedric-vernier">
+      
+      <a href="../fiche/fiche_cedric.pdf">  <strong>Cédric Vernier</strong> 
+        <span>Président</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Connecteur L1 -> L2 -->
+  <div class="connector v down" aria-hidden="true"></div>
+
+  <!-- Ligne 2 -->
+  <div class="row row-2">
+    <div class="card role-staff" id="ophelie-cormier">
+      <a href="../fiche/fiche_ophelie.pdf">
+        <strong>Ophélie Cormier</strong>
+        <span>DRH</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Connecteur L2 -> L3 (fourche) -->
+  <div class="connector v fork" aria-hidden="true"></div>
+
+  <!-- Ligne 3 -->
+  <div class="row row-3">
+    <div class="card role-emp" id="matheo-maurice">
+      <a href="../fiche/fiche_matheo.pdf">
+        <strong>Mathéo Maurice</strong>
+        <span>Employé</span>
+      </a>
+    </div>
+
+    <div class="card role-emp" id="pascal-carpentier">
+      <a href="../fiche/fiche_pascal.pdf">
+        <strong>Pascal Carpentier</strong>
+        <span>Employé</span>
+      </a>
+    </div>
+
+    <div class="card role-emp" id="mathilde-vasseur">
+      <a href="../fiche/fiche_mathilde.pdf">
+        <strong>Mathilde Vasseur</strong>
+        <span>Secrétaire</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Connecteurs horizontaux entre les 3 boxes de la ligne 3 -->
+  <div class="connector h row-3-h" aria-hidden="true"></div>
+
+</section>
+<!-- === /Organigramme === -->
 <footer class="footer">
     <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
 </footer>

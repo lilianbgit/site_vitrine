@@ -9,29 +9,59 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="">Accueil</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">À propos</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
+    <!-- <div class="org">
+  <ul>
+    <li>
+      <div class="node">Direction</div>
+      <ul>
+        <li>
+          <div class="node">Pôle A</div>
+          <ul>
+            <li><div class="node">Équipe A1</div></li>
+            <li><div class="node">Équipe A2</div></li>
+          </ul>
+        </li>
+        <li>
+          <div class="node">Pôle B</div>
+          <ul>
+            <li><div class="node">Équipe B1</div></li>
+            <li><div class="node">Équipe B2</div></li>
+            <li><div class="node">Équipe B3</div></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div> -->
+<!-- <section class="org-grid">
+  <div class="node root">Direction</div>
+  <div class="children">
+    <div class="node">Pôle A</div>
+    <div class="node">Pôle B</div>
+    <div class="node">Pôle C</div>
+  </div>
+</section> -->
+<section class="org-cards">
+  <article class="card lead">
+    <h3>Direction</h3>
+    <p>Jane Doe — Directrice</p>
+  </article>
 
-    <script>
-        const burger = document.querySelector('.burger');
-        const navLinks = document.querySelector('.nav-links');
-
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            burger.classList.toggle('toggle');
-        });
-    </script>
+  <div class="row">
+    <article class="card">
+      <h4>Pôle A</h4>
+      <p>John Smith — Manager</p>
+    </article>
+    <article class="card">
+      <h4>Pôle B</h4>
+      <p>Amélie Martin — Manager</p>
+    </article>
+    <article class="card">
+      <h4>Pôle C</h4>
+      <p>Lucas Bernard — Manager</p>
+    </article>
+  </div>
+</section>
 </body>
 </html>
 ``

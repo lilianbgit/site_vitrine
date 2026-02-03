@@ -82,3 +82,132 @@ body {
     }
 }
 
+/* Reset minimal */
+.org, .org ul { margin: 0; padding: 0; }
+.org ul { list-style: none; position: relative; padding-top: 1.5rem; }
+
+/* Relie les enfants au parent (trait vertical au-dessus du UL) */
+.org ul::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  width: 2px; height: 1.2rem;
+  background: #c7c7c7;
+}
+
+/* Chaque LI a des traits horizontaux pour se connecter aux frères/soeurs */
+.org li {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem .75rem 0 .75rem; /* top = espace pour les traits */
+}
+
+/* Traits horizontaux */
+.org li::before,
+.org li::after {
+  content: "";
+  position: absolute;
+  top: 0.75rem; /* aligné sous le parent */
+  width: 50%; height: 2px;
+  background: #c7c7c7;
+}
+
+.org li::before { left: -50%; }
+.org li::after  { right: -50%; }
+
+/* Retire le trait gauche pour le premier et droit pour le dernier */
+.org li:first-child::before { display: none; }
+.org li:last-child::after  { display: none; }
+
+/* Boîtes des nœuds */
+.org .node {
+  display: inline-block;
+  min-width: 9rem;
+  padding: .6rem .8rem;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: .5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  font: 500 0.95rem/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #242424;
+}
+
+/* Trait vertical reliant parent -> node */
+.org li > .node {
+  position: relative;
+}
+.org li > .node::before {
+  content: "";
+  position: absolute;
+  top: -0.75rem; left: 50%; transform: translateX(-50%);
+  width: 2px; height: 0.75rem;
+  background: #c7c7c7;
+}
+
+/* Responsive : empile sur petits écrans et évite les débordements */
+@media (max-width: 700px) {
+  .org li { display: block; }
+  .org ul::before,
+  .org li::before, .org li::after { display: none; } /* on retire les traits fins */
+  .org .node { width: min(100%, 26rem); }
+}
+
+.org-grid {
+  --gap: 2rem;
+  display: grid;
+  grid-template-rows: auto var(--gap) auto;
+  justify-items: center;
+}
+
+.org-grid .root { grid-row: 1; }
+.org-grid .children {
+  grid-row: 3;
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* Ligne verticale sous le root */
+.org-grid::before {
+  content: "";
+  grid-row: 2;
+  width: 2px; height: var(--gap);
+  background: #c7c7c7;
+  justify-self: center;
+}
+
+/* Lignes horizontales vers les enfants */
+.org-grid .children {
+  position: relative;
+}
+.org-grid .children::before {
+  content: "";
+  position: absolute;
+  top: -1rem; left: 0; right: 0;
+  height: 2px; background: #c7c7c7;
+}
+
+/* Petites boîtes réutilisables */
+.node {
+  min-width: 9rem;
+  padding: .6rem .8rem;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: .5rem;
+}
+.org-cards { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+.org-cards .row {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+}
+.card {
+  flex: 1 1 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+.card.lead { text-align: center; border-color: #cbd5e1; }
+.card h3, .card h4 { margin: 0 0 .25rem 0; }
