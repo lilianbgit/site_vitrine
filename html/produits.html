@@ -8,19 +8,158 @@
     <link rel="stylesheet" href="../css/produit.css">
 </head>
 <body class="background">
-    <nav class="navbar">
+  <nav class="navbar">
     <div class="logo">Mat'inf</div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <ul class="nav-links" id="nav-links">
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="histoire.html">Notre histoire</a></li>
-        <li><a href="equipe.html">Notre équipe</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="contact.html">Nous contacter</a></li>
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="histoire.html">Notre histoire</a></li>
+      <li><a href="equipe.html">Notre équipe</a></li>
+      <li><a href="produits.html" aria-current="page">Nos Produits</a></li>
+      <li><a href="contact.html">Nous contacter</a></li>
     </ul>
-</nav> 
-<footer class="footer">
-    <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
-</footer>
+
+    <!-- Bouton panier dans la barre de navigation -->
+    <button class="cart-toggle" id="cart-toggle" aria-label="Ouvrir le panier">
+      🛒 <span id="cart-count" aria-live="polite">0</span>
+    </button>
+  </nav>
+
+  <!-- Liste des produits -->
+  <section class="products">
+    <!-- Exemple de produit 1 -->
+    <div class="block">
+      <img src="../image/barrette_16.png" alt="Barrette de RAM 16GO" />
+      <div class="textbas">
+      <div class="title">Barrette de RAM 16GO</div>
+      <div class="price">80,00 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p1"
+        data-name="barrette de RAM 16GO"
+        data-price="80.00"
+        data-image="../image/barrette_16.png"
+      >
+        Ajouter au panier
+      </button>
+      </div>
+    </div>
+
+    <!-- Exemple de produit 2 -->
+    <div class="block">
+      <img src="../image/barrette_ram_8.png" alt="Barrette de RAM 8GO" />
+      <div class="textbas">
+      <div class="title">Barrette de RAM 8GO</div>
+      <div class="price">50,00 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p2"
+        data-name="Barrette de RAM 8GO"
+        data-price="50.00"
+        data-image="../image/barrette_ram_8.png"
+      >
+        Ajouter au panier
+      </button>
+      </div>
+    </div>
+
+    <!-- Exemple de produit 3 -->
+    <div class="block">
+      <img src="../image/cpu.png" alt="cpu" />
+      <div class="textbas">
+      <div class="title">CPU intel</div>
+      <div class="price">200,00 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p3"
+        data-name="CPU intel"
+        data-price="200.00"
+        data-image="../image/cpu.png"
+      >
+        Ajouter au panier
+      </button>
+      </div>
+    </div>
+
+    <!-- Ajoutez d'autres produits en copiant ce bloc -->
+    <div class="block">
+      <img src="../images/produit4.jpg" alt="Produit 4" />
+      <div class="textbas">
+      <div class="title">Produit 4</div>
+      <div class="price">19,90 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p4"
+        data-name="Produit 4"
+        data-price="19.90"
+        data-image="../images/produit4.jpg"
+      >
+        Ajouter au panier
+      </button>
+    </div>
+    </div>
+
+    <div class="block">
+      <img src="../images/produit5.jpg" alt="Produit 5" />
+      <div class="textbas">
+      <div class="title">Produit 5</div>
+      <div class="price">12,50 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p5"
+        data-name="Produit 5"
+        data-price="12.50"
+        data-image="../images/produit5.jpg"
+      >
+        Ajouter au panier
+      </button></div>
+    </div>
+    <div class="block">
+      <img src="../images/produit6.jpg" alt="Produit 6" />
+      <div class="textbas">
+      <div class="title">Produit 6</div>
+      <div class="price">39,00 €</div>
+      <button
+        class="add-to-cart"
+        data-id="p6"
+        data-name="Produit 6"
+        data-price="39.00"
+        data-image="../images/produit6.jpg"
+      >
+        Ajouter au panier
+      </button></div>
+    </div>
+  </section>
+
+  <!-- Panneau latéral du panier -->
+  <div id="cart-overlay" class="cart-overlay" hidden></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" tabindex="-1">
+    <header class="cart-header">
+      <h2>Votre panier</h2>
+      <button class="cart-close" id="cart-close" aria-label="Fermer le panier">✕</button>
+    </header>
+
+    <ul id="cart-items" class="cart-items" aria-live="polite"></ul>
+
+    <div class="cart-summary">
+      <div class="row">
+        <span>Sous-total</span><strong id="cart-subtotal">0,00 €</strong>
+      </div>
+      <div class="row small">
+        <span>TVA (20%)</span><span id="cart-vat">0,00 €</span>
+      </div>
+      <div class="row total">
+        <span>Total TTC</span><strong id="cart-total">0,00 €</strong>
+      </div>
+      <button id="checkout" class="btn-primary">Valider la commande</button>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <p>© 2026 Mat'inf. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Script panier -->
+  <script src="../java/panier.js" defer></script>
 </body>
 </html>
