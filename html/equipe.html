@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -7,78 +8,84 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/equipe.css">
 </head>
+
 <body class="background">
-    <nav class="navbar">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
     <div class="logo">Mat'inf</div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="histoire.html">Notre histoire</a></li>
-        <li><a href="equipe.html">Notre équipe</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="contact.html">Nous contacter</a></li>
-    </ul>
-</nav> 
-<!-- === Organigramme (CSS-only, avec flèches, sans surbrillance) === -->
+
+
+<ul class="nav-links">
+    <li><a href="accueil.html">Accueil</a></li>
+    <li><a href="histoire.html">Notre histoire</a></li>
+    <li><a href="equipe.html" aria-current="page">Notre équipe</a></li>
+    <li><a href="produits.html">Nos Produits</a></li>
+    <li><a href="contact.html">Nous contacter</a></li>
+</ul>
+
+
+</nav>
+
+<!-- ================= ORGANIGRAMME ================= -->
+
 <section class="org3" aria-label="Organigramme">
 
-  <!-- Ligne 1 -->
-  <div class="row row-1">
-    <div class="card role-dir" id="cedric-vernier">
-      
-      <a href="../fiche/fiche_cedric.pdf">  <strong>Cédric Vernier</strong> 
-        <span>Président</span>
-      </a>
-    </div>
+  <!-- ===== CÉDRIC (HAUT) ===== -->
+
+  <div class="row">
+    <a class="card role-dir" href="../fiche/fiche_cedric.pdf">
+      <strong>Cédric Vernier</strong>
+      <span>Président</span>
+    </a>
   </div>
 
-  <!-- Connecteur L1 -> L2 -->
-  <div class="connector v down" aria-hidden="true"></div>
+  <!-- Flèche vers Ophélie -->
 
-  <!-- Ligne 2 -->
-  <div class="row row-2">
-    <div class="card role-staff" id="ophelie-cormier">
-      <a href="../fiche/fiche_ophelie.pdf">
-        <strong>Ophélie Cormier</strong>
-        <span>DRH</span>
-      </a>
-    </div>
+  <div class="connector v down"></div>
+
+  <!-- ===== OPHÉLIE ===== -->
+
+  <div class="row">
+    <a class="card role-staff" href="../fiche/fiche_ophelie.pdf">
+      <strong>Ophélie Cormier</strong>
+      <span>DRH</span>
+    </a>
   </div>
 
-  <!-- Connecteur L2 -> L3 (fourche) -->
-  <div class="connector v fork" aria-hidden="true"></div>
+  <!-- Fourche vers employés -->
 
-  <!-- Ligne 3 -->
+  <div class="connector v fork"></div>
+ <!-- ===== EMPLOYÉS ===== -->
+
   <div class="row row-3">
-    <div class="card role-emp" id="matheo-maurice">
-      <a href="../fiche/fiche_matheo.pdf">
-        <strong>Mathéo Maurice</strong>
-        <span>Employé</span>
-      </a>
-    </div>
 
-    <div class="card role-emp" id="pascal-carpentier">
-      <a href="../fiche/fiche_pascal.pdf">
-        <strong>Pascal Carpentier</strong>
-        <span>Employé</span>
-      </a>
-    </div>
+<a class="card role-emp" href="../fiche/fiche_pascal.pdf">
+  <strong>Pascal Carpentier</strong>
+  <span>Employé</span>
+</a>
 
-    <div class="card role-emp" id="mathilde-vasseur">
-      <a href="../fiche/fiche_mathilde.pdf">
-        <strong>Mathilde Vasseur</strong>
-        <span>Secrétaire</span>
-      </a>
-    </div>
+<a class="card role-emp" href="../fiche/fiche_matheo.pdf">
+  <strong>Mathéo Maurice</strong>
+  <span>Employé</span>
+</a>
+
+<a class="card role-emp" href="../fiche/fiche_mathilde.pdf">
+  <strong>Mathilde Vasseur</strong>
+  <span>Secrétaire</span>
+</a>
+
+
   </div>
-
-  <!-- Connecteurs horizontaux entre les 3 boxes de la ligne 3 -->
-  <div class="connector h row-3-h" aria-hidden="true"></div>
 
 </section>
-<!-- === /Organigramme === -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
     <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
 </footer>
+
 </body>
 </html>

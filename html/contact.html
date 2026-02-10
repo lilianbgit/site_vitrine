@@ -1,26 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mat'inf</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contact.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mat'inf - Contact</title>
+
+  <!-- Tes CSS existants -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
 </head>
+
 <body class="background">
-    <nav class="navbar">
+
+  <nav class="navbar">
     <div class="logo">Mat'inf</div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <ul class="nav-links" id="nav-links">
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="histoire.html">Notre histoire</a></li>
-        <li><a href="equipe.html">Notre équipe</a></li>
-        <li><a href="produits.html">Nos Produits</a></li>
-        <li><a href="contact.html">Nous contacter</a></li>
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="histoire.html">Notre histoire</a></li>
+      <li><a href="equipe.html">Notre équipe</a></li>
+      <li><a href="produits.html">Nos Produits</a></li>
+      <li><a href="contact.html">Nous contacter</a></li>
     </ul>
-</nav> 
-<footer class="footer">
-    <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
-</footer>
+  </nav>
+
+  <main class="contact-wrap">
+    <section class="contact-card">
+      <h1>Nous contacter</h1>
+      <p class="contact-subtitle">Remplis ce formulaire, on te répond rapidement.</p>
+
+      <!-- OPTION PRO (serveur) : envoi vers un script PHP
+      <form class="contact-form" action="send_contact.php" method="POST">
+        <div class="grid">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" placeholder="Ex: Dupont" required />
+          </div>
+
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="prenom" type="text" placeholder="Ex: Marie" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Adresse mail</label>
+          <input id="email" name="email" type="email" placeholder="ex: marie.dupont@mail.com" required />
+        </div>
+
+        <div class="field">
+          <label for="motif">Motif du problème</label>
+          <textarea id="motif" name="motif" rows="6" placeholder="Explique ton problème..." required></textarea>
+        </div>
+
+        <button class="btn" type="submit">Envoyer</button>
+
+        <p class="hint">
+          * Si tu n’as pas de serveur, utilise la version “mailto” plus bas.
+        </p>
+      </form> -->
+
+      <!-- OPTION SIMPLE (sans serveur) : mailto -->
+      <div class="mailto-box">
+        <form class="contact-form" id="mailtoForm">
+          <div class="grid">
+            <div class="field">
+              <label for="nom2">Nom</label>
+              <input id="nom2" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="prenom2">Prénom</label>
+              <input id="prenom2" type="text" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email2">Adresse mail</label>
+            <input id="email2" type="email" required />
+          </div>
+
+          <div class="field">
+            <label for="motif2">Motif du problème</label>
+            <textarea id="motif2" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn-outline" type="submit"><a href="mailto:outlook_4F15F958F0E7CE71@outlook.com">Envoyer</a></button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Menu mobile (si tu en as besoin)
+    const toggle = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+    if (toggle && links) {
+      toggle.addEventListener("click", () => links.classList.toggle("open"));
+    }
+
+    // Mailto (sans serveur)
+    document.getElementById("mailtoForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nom = document.getElementById("nom2").value.trim();
+      const prenom = document.getElementById("prenom2").value.trim();
+      const email = document.getElementById("email2").value.trim();
+      const motif = document.getElementById("motif2").value.trim();
+
+      const to = "contact@matinf.fr"; // <-- Mets ton email ici
+      const subject = encodeURIComponent("Demande de contact - Mat'inf");
+      const body = encodeURIComponent(
+        `Nom: ${nom}\nPrénom: ${prenom}\nEmail: ${email}\n\nMotif:\n${motif}`
+      );
+
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+  <footer class="footer">
+    <p>© 2026 Mat'inf. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>

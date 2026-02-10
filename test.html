@@ -1,68 +1,93 @@
-
-
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Responsive</title>
-    <link rel="stylesheet" href="test.css">
+    <title>Mat'inf</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/equipe.css">
 </head>
-<body>
-    <!-- <div class="org">
-  <ul>
-    <li>
-      <div class="node">Direction</div>
-      <ul>
-        <li>
-          <div class="node">Pôle A</div>
-          <ul>
-            <li><div class="node">Équipe A1</div></li>
-            <li><div class="node">Équipe A2</div></li>
-          </ul>
-        </li>
-        <li>
-          <div class="node">Pôle B</div>
-          <ul>
-            <li><div class="node">Équipe B1</div></li>
-            <li><div class="node">Équipe B2</div></li>
-            <li><div class="node">Équipe B3</div></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div> -->
-<!-- <section class="org-grid">
-  <div class="node root">Direction</div>
-  <div class="children">
-    <div class="node">Pôle A</div>
-    <div class="node">Pôle B</div>
-    <div class="node">Pôle C</div>
-  </div>
-</section> -->
-<section class="org-cards">
-  <article class="card lead">
-    <h3>Direction</h3>
-    <p>Jane Doe — Directrice</p>
-  </article>
+
+<body class="background">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+    <div class="logo">Mat'inf</div>
+
+```
+<ul class="nav-links">
+    <li><a href="accueil.html">Accueil</a></li>
+    <li><a href="histoire.html">Notre histoire</a></li>
+    <li><a href="equipe.html" aria-current="page">Notre équipe</a></li>
+    <li><a href="produits.html">Nos Produits</a></li>
+    <li><a href="contact.html">Nous contacter</a></li>
+</ul>
+```
+
+</nav>
+
+<!-- ================= ORGANIGRAMME ================= -->
+
+<section class="org3" aria-label="Organigramme">
+
+  <!-- ===== CÉDRIC ===== -->
 
   <div class="row">
-    <article class="card">
-      <h4>Pôle A</h4>
-      <p>John Smith — Manager</p>
-    </article>
-    <article class="card">
-      <h4>Pôle B</h4>
-      <p>Amélie Martin — Manager</p>
-    </article>
-    <article class="card">
-      <h4>Pôle C</h4>
-      <p>Lucas Bernard — Manager</p>
-    </article>
+    <a class="card role-dir" href="../fiche/fiche_cedric.pdf">
+      <strong>Cédric Vernier</strong>
+      <span>Président</span>
+    </a>
   </div>
+
+  <!-- Flèche vers Ophélie -->
+
+  <div class="connector v down"></div>
+
+  <!-- ===== OPHÉLIE ===== -->
+
+  <div class="row">
+    <a class="card role-staff" href="../fiche/fiche_ophelie.pdf">
+      <strong>Ophélie Cormier</strong>
+      <span>DRH</span>
+    </a>
+  </div>
+
+  <!-- Fourche + lignes -->
+
+  <div class="connector v fork"></div>
+
+  <!-- ===== EMPLOYÉS ===== -->
+
+  <div class="row row-3">
+
+<a class="card role-emp" href="../fiche/fiche_pascal.pdf">
+  <strong>Pascal Carpentier</strong>
+  <span>Employé</span>
+</a>
+
+<a class="card role-emp" href="../fiche/fiche_matheo.pdf">
+  <strong>Mathéo Maurice</strong>
+  <span>Employé</span>
+</a>
+
+<a class="card role-emp" href="../fiche/fiche_mathilde.pdf">
+  <strong>Mathilde Vasseur</strong>
+  <span>Secrétaire</span>
+</a>
+```
+
+  </div>
+
 </section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+    <p>&copy; 2026 Mat'inf. Tous droits réservés.</p>
+</footer>
+
 </body>
 </html>
-``
 

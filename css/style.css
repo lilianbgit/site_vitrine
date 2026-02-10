@@ -17,7 +17,7 @@ body {
     width: 100%; /* ou 100% */
     left: 0;
     margin: 0;
-    padding: 0 0;
+    padding: 5px;
     box-sizing: border-box;
     background-color: #333;
     display: flex;
