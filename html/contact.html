@@ -85,7 +85,7 @@
             <textarea id="motif2" rows="5" required></textarea>
           </div>
 
-          <button class="btn btn-outline" type="submit"><a href="mailto:outlook_4F15F958F0E7CE71@outlook.com">Envoyer</a></button>
+          <button class="btn btn-outline" type="submit">Envoyer</button>
         </form>
       </div>
     </section>
@@ -107,7 +107,7 @@
       const email = document.getElementById("email2").value.trim();
       const motif = document.getElementById("motif2").value.trim();
 
-      const to = "contact@matinf.fr"; // <-- Mets ton email ici
+      const to = "outlook_4F15F958F0E7CE71@outlook.com"; // <-- Mets ton email ici
       const subject = encodeURIComponent("Demande de contact - Mat'inf");
       const body = encodeURIComponent(
         `Nom: ${nom}\nPrénom: ${prenom}\nEmail: ${email}\n\nMotif:\n${motif}`
