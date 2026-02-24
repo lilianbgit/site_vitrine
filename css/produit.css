@@ -1,4 +1,7 @@
 /* Conteneur de produits */
+*{
+  box-sizing: border-box;
+}
 section {
   display: flex;
   flex-wrap: wrap;          /* Permet le retour à la ligne */
@@ -27,12 +30,13 @@ section {
 /* Image produit responsive */
 .block img {
   display: block;
-  width: 100%;
+  background-position: center;
+  width: 500px;
   height: auto;
-  object-fit: cover;        /* utile si vous contraignez la hauteur */
+  object-fit: cover;       /* utile si vous contraignez la hauteur */
   border-radius: 6px;
   margin-bottom: 8px;
-  max-height: 300px;
+  padding: 100px 50px 10px 50px;
 }
 /* 1) La carte devient un conteneur flex en colonne */
 .block {
@@ -48,6 +52,7 @@ section {
 
 /* Optionnel : petite séparation visuelle en haut de la zone texte */
 .textbas {
+  height: 200px;
   padding-top: 8px;
   border-top: 1px solid rgba(0,0,0,.06);
 }
@@ -84,6 +89,7 @@ section {
 #cart-count {
   font-weight: 700;
   margin-left: 6px;
+  color: white;
 }
 
 /* Bouton ajouter au panier */
