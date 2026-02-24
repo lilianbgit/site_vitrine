@@ -15,7 +15,7 @@ section {
   /* Style visuel du bloc */
   background: #ffffff;         /* Ajustez selon votre thème */
   color: #111;              /* Contraste du texte */
-  border: 2px solid red;    /* Vous aviez déjà un contour rouge */
+  border: 2px solid none;    /* Vous aviez déjà un contour rouge */
   border-radius: 8px;
   padding: 12px;
   text-align: center;
