@@ -1,6 +1,8 @@
 /* Conteneur de produits */
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 section {
   display: flex;
@@ -16,19 +18,20 @@ section {
   box-sizing: border-box;
 
   /* Style visuel du bloc */
-  background: #ffffff;         /* Ajustez selon votre thème */
-  color: #111;              /* Contraste du texte */
+  background:linear-gradient(#0d20cc ,#12e2e2  ) ;         /* Ajustez selon votre thème */
+  color: #000000;              /* Contraste du texte */
   border: 2px solid none;    /* Vous aviez déjà un contour rouge */
   border-radius: 8px;
   padding: 12px;
   text-align: center;
   /* Optionnel: ombre légère */
-  box-shadow: 0 2px 6px rgba(0,0,0,.08);
-  
+  box-shadow: 0px 2px 6px rgba(0,0,0,.08);
+  border:1px #000000 solid;
 }
 
 /* Image produit responsive */
 .block img {
+  box-sizing: border-box;
   display: block;
   background-position: center;
   width: 500px;
